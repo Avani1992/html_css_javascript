@@ -1,0 +1,30 @@
+body
+{
+    background-color:darkgray;
+}
+#src
+{
+   height: 600px;
+   width: 700px;
+   margin-top: 50px;
+   
+  
+}
+#data
+{
+
+    margin-left: 140px;
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    margin-top: 50px;
+    
+}
+.h1
+{
+    color:red;
+}
+.button
+{
+    color:green;
+}
