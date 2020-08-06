@@ -1,0 +1,24 @@
+d=dict()
+def fun(variable): 
+  global d
+  try:
+    d[variable]=d[variable]*1
+    return False
+  except KeyError:
+    d[variable]=1
+    return True
+      
+
+# sequence 
+sequence = ['g', 'e', 'e', 'j', 'k', 's', 'p', 'k','s','p']
+seq=[1,2,3,1,4,5,2,6,4]
+
+#for char in sequence:
+ # print(fun(char))
+
+# using filter function 
+filtered = filter(fun, seq) 
+
+print('The filtered letters are:') 
+for s in filtered: 
+	print(s) 

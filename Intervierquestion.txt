@@ -1,0 +1,99 @@
+1. blocklevel - inline element(html)
+ans. block level: It is used to divide the blocks and called as “Block Level Elements”
+It takes the Entire width eg.  <section>,<paragraph>,<Div>,<table>,<form> 
+
+inline element:It is also used to divide the blocks and called as “Inline Elements” 
+It only takes the Element width eg.<a>,<span>,<input>,<b>,<i>,<strong>
+-------------------------------------------------------------------------------------
+2. attribute of anchor tag- href,class,id,style
+-----------------------------------------------------------------------------------
+3. display:block,inline- display elemnt in form of block or inline
+------------------------------------------------------------------------------------
+4.Js: var,let keyword, BOM,DOM, string,Array methods,callback function,asynchronious, Promises,
+------------------------------------------------------------------------------------------------
+5. divide webpage in four different color:
+
+<div class="row">
+            <div class="col-6 bg-danger" style="height: 400px;"></div>
+            <div class="col-6 bg-success" style="height: 400px;"></div>
+            <div class="col-6 bg-primary" style="height: 400px;"></div>
+            <div class="col-6 bg-secondary" style="height: 400px;"></div>
+        </div>
+
+
+-----------------------------------------------------------------------------------------------
+6. map,reduce,reverse strig,sort,filter for remove duplicate elemet
+
+var array1=[23,45,67,78,23,67,99,3,4]
+
+var arra2=array1.sort(function(a,b)
+{
+	return (a-b)
+})
+document.write(arra2)
+document.write("<br>")
+
+var arra3=array1.reduce(function(total,a)
+{
+	return total+a
+})
+
+document.write(arra3)
+document.write("<br>")
+
+var arra4=array1.map(function(a)
+{
+	return a*5
+})
+document.write(arra4)
+document.write("<br>")
+
+var str="avani"
+var str1=str.split("").reverse().join("")
+document.write(str1) 
+
+var arr=[1,23,45,23,67,45,89]
+
+var filterarray=arr.filter(function(value,index){
+
+    if(arr.indexOf(value)===index)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+
+}
+
+)
+document.write(filterarray)
+document.write("<br>")
+
+////////////////////////////////////////////////////////////////////////////////
+
+//2. delete b,c
+
+var b=['a','b','c','d','e']
+
+b.splice(1,2)
+document.write(b)
+document.write("<br>")
+
+//////////////////////////////////////////////////////////////////////////////////
+
+function Vehicle(name, maker) { 
+    this.name = name; 
+    this.maker = maker; 
+    document.write(name,maker)
+    }
+    
+    
+    let car1 = new Vehicle('Fiesta', 'Ford'); 
+    let car2 = new Vehicle('Santa Fe', 'Hyundai') 
+    
+    console.log(car1.name); // Output: Fiesta 
+    console.log(car2.name); // Output: Santa Fe 
+
+
