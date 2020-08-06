@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p,h1{ color:red;}
+    </style>
+</head>
+<body>
+    <!---------block-level--------------------------->
+    <p>Hello</p>
+    <p>How r u???</p>
+    <form action="#">
+        <input type="text" name="name" value="Username">
+        <input type="password" name="pass" value="Password">
+        <input type="submit" value="Submit">
+    </form>
+    <p>Block-level</p>
+    <!---------------------------------------------------------------->
+    <a href="#">Hello</a>
+    <a href="#">Hi</a>
+    <b>bold</b>
+    <i>Italic</i>
+    <!------------------------------------------------------------------------->
+    <form action="#" id="form1">
+        First name: <input type="text" name="fname"><br>
+         Last name: <input type="text" name="lname" form="form1"><br>
+         <input type="datetime-local" name="bdaytime"><br>
+         <input type="range" name="points" min="0" max="10"><br>
+         <input type="search" name="googlesearch"><br>
+         <input type="url" name="homepage">
+
+         <input type="submit" value="Submit">
+         </form>
+
+         <p style="word-spacing: 15px;text-shadow:3px 2px red;">Hello how r u?????</p>
+         <p style="word-spacing: -1px; font-style: oblique;float:right ;">Hellohowr u????</p>
+         <textarea name="" id="" style="width: 100%; padding:3px;"></textarea>
+         <p>Inline css</p>
+         <h1 >Header tag</h1>
+         <h2 style="border-style:groove; border-width: medium;border-radius: 20px 20px 5px 5px;">Java,Python,Js,HTML</h2>
+
+         <!--------------------------input-group-prepend-->
+         <form>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">@</span>
+              </div>
+              <input type="text" class="form-control" placeholder="Username">
+            </div>
+          
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Your Email">
+              <div class="input-group-append">
+                <span class="input-group-text">@example.com</span>
+              </div>
+            </div>
+          </form>
+        </body>
+</html>

@@ -1,0 +1,149 @@
+h1.h11{
+    color: red;
+    text-align: center;
+    font-family: Courier New, Courier, monospace;
+    font-style: italic;
+    text-decoration-line:underline;
+}
+div#div1{
+    font-size: 20px;
+    color: brown;
+}
+#img1{
+    border: 2px dotted ;
+    width: 250px;
+    height: 200px;
+}
+.a1:hover
+{
+    color: red;
+    font-size: 28px;
+}
+.s1
+{
+    padding-right: 20px;
+    font-size: 20px;
+}
+/*flower.html*/
+.h12{
+    text-align: center;
+    font-family: cursive;
+    font-size: 50px;
+    color: chocolate;
+}
+#f1{
+    width: 400px;
+    height: 300px;
+    
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color:cadetblue;
+    color:black;
+    text-align: center;
+    border-radius: 2px;
+    
+    font-size: 20px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible
+  }
+  .t1
+  {
+      border: 2px solid;
+      border-collapse: collapse;
+
+  }
+  .th1
+  {
+      border: 2px solid red;
+      font-size: 20px;
+      padding-top: 20px;
+  }
+  .td1
+  {
+      height: 30px;
+      border: 2px solid;
+      font-size: 15px;
+      font-family: cursive;
+      background-color: aquamarine;
+      padding-left: 15px;
+      padding-bottom: 20px;
+  }
+  .td2
+  {
+    height: 30px;
+    border: 2px solid;
+    font-size: 15px;
+    font-family: cursive;
+    background-color: chocolate;
+    padding-left: 15px;
+    padding-bottom: 20px;
+
+  }
+
+  /*fruit page*/
+  .h13{
+    text-align: center;
+    font-family:fantasy;
+    font-size: 50px;
+    color:blueviolet;
+    text-decoration-line: overline;
+}
+#fr1
+{
+    width: 200px;
+    height: 150px;
+    border: 4px solid red;
+    
+    transition: width 2s,height  3s;
+}
+#fr1:hover{
+   
+    width: 350px;
+    height: 300px;
+    opacity: 0.5;
+    
+}
+h2
+{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    color: brown;
+    text-decoration-line:underline;
+    padding-left: 200px;
+    
+}
+ul
+{
+    color: blue;
+    font-style: oblique;
+    list-style-type: square;
+    font-size: 20px;
+    padding-left: 200px;
+}
+li
+{
+    padding-top: 20px;
+}
+ol
+{
+    padding-left: 200px;
+    color: crimson;
+    list-style-type: lower-roman;
+    font-size: 20px;
+    list-style-position: initial;
+}
