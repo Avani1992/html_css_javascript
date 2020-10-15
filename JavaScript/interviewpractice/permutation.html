@@ -1,0 +1,58 @@
+<!-- Search Word from Dictionary according to the word enter in permuttion of that word.. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var map=new Map();
+        map.set("logo",1);
+        map.set("tap",2);
+        map.set("google",3);
+        map.set("every",4);
+        map.set("pray",5);
+
+        function show(){
+        var str=document.getElementById('un').value;
+        console.log(str);
+         
+        
+    let letters = str.split('')
+      , results = [[letters.shift()]] 
+    while (letters.length) {
+        const currLetter = letters.shift()
+        let tmpResults = []
+        results.forEach(result => {
+            let rIdx = 0
+            while (rIdx <= result.length) {
+                const tmp = [...result]
+                tmp.splice(rIdx, 0, currLetter)
+                tmpResults.push(tmp)
+                rIdx++
+            }
+        })
+        results = tmpResults
+    }
+    
+    var data= results
+      .map(letterArray => letterArray.join(''))
+      .filter((el, idx, self) => (self.indexOf(el) === idx))
+      .sort();
+
+    for(i=0;i<data.length;i++){
+        if(map.has(data[i])){
+        document.getElementById('text').srcdoc=data[i];
+        }
+    }
+            
+        
+    }
+    </script>
+</head>
+<body>
+    <input type="text" name="username" id="un" onkeyup="show()"><br>
+    <iframe id="text" frameborder="2"></iframe>
+</body>
+</html>

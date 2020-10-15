@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        var mypromise=new Promise(function(resolve,reject){
+            setTimeout(function(){
+                document.write("Hello")
+            },2000);
+        });
+        var mypromise1=new Promise(function(resolve,reject){
+            if(10>5){
+                resolve("Successful")
+            }else{
+                reject("Not successful")
+            }
+        });
+        var mypromise2=new Promise(function(resolve,reject){
+            if(10<5){
+                resolve("Successful2")
+            }else{
+                reject("Not successful2")
+            }
+        });
+        Promise.race([mypromise,mypromise1,mypromise2])
+        .then(function(success){
+            document.write(success)
+        })
+        .catch(function(fail){
+            document.write(fail)
+        })
+    </script>  -->
+     <script>
+
+         function placeOrder(topings){
+             document.write("Order placed")
+         }
+         function collectOrder(order){
+             document.write("Order Collected")
+         }
+         function eatPizza(pizza){
+             document.write("Pizza eaten.")
+         }
+         var token=1;
+        var promise1=new Promise(function chooseToppings(resolve,reject)
+        {
+            if(token==1){
+                resolve("Place order")
+            }else{
+                reject("Order rejected")
+            }
+        });
+        promise1
+        .then(function(toppings) {
+            return placeOrder(toppings);
+        })
+        .then(function(order) {
+            return collectOrder(order);
+        })
+        .then(function(pizza) {
+            eatPizza(pizza);
+        })
+        .catch(function(reject){
+            token=1;
+            promise1;
+        })
+        
+    </script> 
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function suggestedId(){
+            var uname=document.getElementById('un').value;
+            var sname=document.getElementById('sn').value;
+            var fname=uname.charAt(0)+sname;
+            var sename=sname.charAt(0)+uname;
+            var tname=uname.charAt(0)+uname.charAt(1)+sname;
+            if(fname.length <10){
+                var len=fname.length;
+                for(var i=len;i<10;i++){
+                    fname=fname+i;
+                }
+            }
+            document.getElementById('first').innerHTML=fname;
+            if(sname.length <10){
+                var len=sename.length;
+                for(var i=len;i<10;i++){
+                    sename=sename+i;
+                }
+            }
+            document.getElementById('second').innerHTML=sename;
+            if(tname.length <10){
+                var len=tname.length;
+                for(var i=len;i<10;i++){
+                    tname=tname+i;
+                }
+            }
+            document.getElementById('third').innerHTML=tname;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="username" id="un" placeholder="Enter First name">
+    <input type="text" name="surname" id="sn" placeholder="Enter Surname">
+    <p id="first"></p>
+    <p id="second"></p>
+    <p id="third"></p>
+    <button type="submit" onclick="suggestedId()">Generate Id</button>
+</body> 
+</html>

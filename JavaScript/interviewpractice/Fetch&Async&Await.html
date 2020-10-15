@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="promise1" id="promise1" cols="30" rows="10">Promise1</textarea>
+    <textarea name="promise2" id="promise2" cols="30" rows="10">Promise2</textarea>
+    <script>
+        dosomething();
+        async function dosomething(){
+            console.log("Start Function")
+            setTimeout(()=>{
+                console.log("Timeout")
+            },5000);
+            console.log("Good Morning!!!")
+            
+            
+            let data=await fetchdata().catch(Error=>console.log(Error.message));
+            document.getElementById('promise1').innerText="Promise1 completed Execution";
+            console.log("Data from request= ",data);
+            let photodata=await fetchdata1();
+            document.getElementById('promise2').innerText="Promise2 completed Execution";
+            console.log("Photo from request= ",photodata);
+           
+            console.log("End Function ")
+        }
+
+        function fetchdata(){
+           var promise1= fetch("https://jsonplaceholder.typicode.com/users").then(response=>response.json());
+           return promise1;
+        }
+
+        function fetchdata1(){
+
+           for(var i=0;i<10;i++){
+                var promise4= fetch("https://jsonplaceholder.typicode.com/photos").then(response=>response.json());
+                var promise2= fetch("https://jsonplaceholder.typicode.com/photos").then(response=>response.json());
+                var promise3= fetch("https://jsonplaceholder.typicode.com/photos").then(response=>response.json());
+           }
+           return promise4;
+        }
+
+        
+    </script>
+</body>
+</html>

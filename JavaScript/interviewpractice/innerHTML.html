@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function commentbox(){
+           var x="Name:<input type='text' name='name'><br>Comment:<br><textarea rows='5' cols='80'></textarea>  ";
+           document.getElementById('location').innerHTML=x;
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="button" value="comment" onclick="commentbox()">
+        
+    </form> 
+    <div id="location"></div>
+</body>
+</html>

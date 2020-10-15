@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun(a){
+            function innerfun(b){
+                return a*b;
+            }
+            return innerfun;
+        }
+        var output=fun(4)
+        document.write("when innerfun(4)= ",output+"<br>"); // return full body of innerfun
+        document.write("when innerfun(5)=",output(5)) // 20
+    </script>
+</body>
+</html>

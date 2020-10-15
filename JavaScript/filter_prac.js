@@ -60,3 +60,4 @@ var filterafter=x.filter(function(value,index)
 })
 console.log(filterafter)
 
+//////////////////////////////////////////////////////////////////

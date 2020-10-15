@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Fetch response is Stream object(returned promise)..then(response=>response.json()); used to convert in Json form and  return promise.
+        var promise1=fetch("https://jsonplaceholder.typicode.com/users").then(response=>response.json());
+        var promise2=fetch("https://jsonplaceholder.typicode.com/posts?userId=1").then(response=>response.json());
+        var promise3=new Promise((resolve,reject)=>{
+            resolve(setTimeout(()=>{
+                console.log("Timeout")
+            },2000));
+        });
+        Promise.all([promise1,promise3,promise2])
+        .then((resp)=>{
+            console.log(resp);
+            console.log("==============================================")
+        })
+        .catch((fail)=>{
+            console.log("Fail to Fetch Pro")
+        })
+        // promise1 .then((resp)=>{
+        //     console.log(resp);
+        //     console.log("==============================================")
+        // })
+        // promise1.catch((fail)=>{
+        //     console.log("Fail to Fetch Pro1")
+        // })
+        // promise2 .then((resp)=>{
+        //     console.log(resp);
+        //     console.log("==============================================")
+        // })
+        // promise2.catch((fail)=>{
+        //     console.log("Fail to Fetch Pro2")
+        // })
+        
+    </script>
+</body>
+</html>

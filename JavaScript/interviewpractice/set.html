@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Set Example</p>
+    <script>  
+        var set = new Set(["jQuery","AngularJS","Bootstrap"]);  
+        document.writeln("Fetching values :"+"<br>");  
+        set.forEach(function display(value1,value2,set)   
+        {  
+        document.writeln('key[' + value1 + '] = ' + value2+"<br>");  
+        })  
+
+        document.writeln(set.has("jQuery"));
+        set.add("Java");
+        for(var ele of set){
+            document.writeln(ele+"<br>")
+        }
+        set.delete("Java");
+        document.writeln("After delete"+"<br>")
+        for(var ele of set){
+            document.writeln(ele+"<br>")
+        }
+        var itr=set.values();  
+        for(i=0;i<set.size;i++)  
+         {  
+            document.writeln(itr.next().value+"<br>");  
+        }  
+                </script>  
+</body>
+</html>

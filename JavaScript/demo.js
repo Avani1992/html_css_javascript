@@ -1,14 +1,14 @@
-// var a;
-// console.log(a);  // undefined
-// a="Java";
-// console.log(a); // Java
-// alert(a);
+var a;
+console.log(a);  // undefined
+a="Java";
+console.log(a); // Java
+alert(a);
 
-// var name=prompt("Enter name");
-// alert(name)
+var name=prompt("Enter name");
+alert(name)
 
-// confirm("confirm")
-// document.write(name)
+confirm("confirm")
+document.write(name)
 
 var age=Number(25)
 console.log("Age type:"+typeof(age))

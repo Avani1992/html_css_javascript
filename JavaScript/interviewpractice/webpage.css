@@ -1,0 +1,12 @@
+body{
+    background-color:khaki;
+}
+table,td{
+    border: 2px solid black;
+    border-radius: 2px;
+    border-bottom-color: 2px solid red;
+}
+.Tulip{
+    height: 250px;
+    width: 250px;
+}

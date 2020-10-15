@@ -43,3 +43,8 @@ var person={
 }
 person.getFullname()
 person.getdata()
+
+
+var s="Avani";
+var str=s.split("").reverse().join();
+console.log(str)

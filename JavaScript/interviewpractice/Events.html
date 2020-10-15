@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function load(){
+            alert("Page is loading...")
+        }
+        function uppercase(){
+                var x=document.getElementById("text");
+                x.value=x.value.toUpperCase();
+        }
+        function mouseover(obj){
+            obj.innerHTML="Welcome"
+        }
+        function mouseout(obj){
+            obj.innerHTML="Thankyou..";
+        }
+    </script>
+</head>
+<body onload="load()">
+    
+    <h2>Onload event</h2>
+    
+    <h3>Onchange event</h3>
+    <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+    <input type="text"  id="text" onchange="uppercase()">
+
+    <h3>OnMouseOver</h3>
+    <button type="submit" value="OnMouseOver" onmouseover="mouseover(this)" onmouseout="mouseout(this)" 
+    style="color: red;height: 50px;width: 100px;">MouseOver</button>
+ 
+</body>
+</html>

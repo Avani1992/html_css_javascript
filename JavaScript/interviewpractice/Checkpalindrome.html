@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkname(){
+         var x=   document.getElementById('data').value;
+         //document.getElementById('red').innerHTML=x;
+         var str="";
+         
+            for(var i=x.length-1;i>=0;i--){
+                 str=str+x.charAt(i);
+                }
+            if(x==str){
+                document.getElementById('red').innerHTML="Palindrome";
+            }else{
+                document.getElementById('green').innerHTML="Not Palindrome";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="name" placeholder="Enter name" id="data">
+    <p id="red"></p>
+    <p id="green"></p>
+    <button type="submit" name="Submit" onclick="checkname()">Submit</button>
+
+</body>
+</html>

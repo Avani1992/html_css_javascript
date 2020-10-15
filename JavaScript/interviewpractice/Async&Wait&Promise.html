@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        dothings();
+        async function dothings(){
+            let p= await delay(1000);  // delay will return the promise
+            console.log(p);// 1000
+        }
+        //await is working as a then or catch part of promises.It will give the output of resolve or rejected.
+        // If await is not there then it print the promise itself.o/p:[[PromiseState]]: "fulfilled"[[PromiseResult]]: 1000
+
+
+        // or 
+
+        dothings();
+        function dothings(){
+            let p= delay(1000).then((value)=>{ console.log(value);}); // delay will return the promise // 1000
+        }
+
+        function delay(ms){
+            return new Promise((resolve,reject)=>{
+                resolve(ms);
+                //reject(new Error("Rejected"));
+            }).catch(Error=>console.log(Error.message)) // if reject then it will catch the error and print("Rejected")
+        }
+    </script>
+
+</body>
+</html>
